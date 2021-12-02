@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+  </head>
+  <body>
+     <button id="button_on">SET ON</button>
+     <button id="button_off">SET OFF</button>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      var socket = io();
+      var button_on = document.getElementById('button_on');
+      var button_off = document.getElementById('button_off');
+
+      button_on.addEventListener('click', event => {
+        socket.emit('set_output4', '1');
+      });
+
+      button_off.addEventListener('click', event => {
+        socket.emit('set_output4', '0');
+      });
+
+  /*    socket.on('chat message', function(msg) {
+        var item = document.createElement('li');
+        item.textContent = msg;
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      }); */
+    </script>
+  </body>
+</html>
