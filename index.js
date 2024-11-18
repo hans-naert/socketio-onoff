@@ -1,5 +1,5 @@
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-var LED = new Gpio(4, 'out'); //use GPIO pin 4, and specify that it is output
+var LED = new Gpio(516, 'out'); //use GPIO pin 4, and specify that it is output
 const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
